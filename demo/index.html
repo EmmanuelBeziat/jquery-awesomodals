@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Modern Form</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+
+		<div class="demo">
+			<button class="btn" data-modal="#modal-demo" data-modal-init>Open up!</button>
+
+			<div class="dialogs">
+				<div class="dialog" id="modal-demo">
+					<div class="dialog__content">
+						<header class="dialog__header">
+							<h1 class="dialog__title">Welcome</h1>
+						</header>
+						<div class="dialog__body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab optio architecto maxime voluptate totam nesciunt quis cumque quos doloremque eius corporis, incidunt, consectetur reprehenderit distinctio! Necessitatibus voluptas in officia magni.
+						</div>
+						<footer class="dialog__footer">
+							<button class="btn" data-modal-close>Close</button>
+						</footer>
+					</div>
+				</div>
+				<div class="dialog-overlay"></div>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="../dist/jquery-awesomodals.min.js"></script>
+		<script>
+			$(function() {
+				$('.demo').awesomodals({
+					debug: true
+				});
+			});
+		</script>
+	</body>
+</html>

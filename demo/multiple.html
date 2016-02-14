@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Modern Form</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+
+		<div class="demo">
+			<button class="btn" data-modal="#modal-demo-1" data-modal-init>Show me #1!</button>
+			<button class="btn" data-modal="#modal-demo-2" data-modal-init>Show me #2!</button>
+
+			<div class="dialogs">
+				<div class="dialog" id="modal-demo-1">
+					<div class="dialog__content">
+						<header class="dialog__header">
+							<h1 class="dialog__title">Here's the #1!</h1>
+						</header>
+						<div class="dialog__body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab optio architecto maxime voluptate totam nesciunt quis cumque quos doloremque eius corporis, incidunt, consectetur reprehenderit distinctio! Necessitatibus voluptas in officia magni.
+						</div>
+						<footer class="dialog__footer">
+							<button class="btn" data-modal-close>Close</button>
+						</footer>
+					</div>
+				</div>
+
+				<div class="dialog" id="modal-demo-2">
+					<div class="dialog__content">
+						<header class="dialog__header">
+							<h1 class="dialog__title">And here's #2!</h1>
+						</header>
+						<div class="dialog__body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe recusandae incidunt sint dolores delectus placeat, est natus ipsam fugit. Vero voluptatum facilis dolores adipisci maxime aperiam libero rem ex est.
+						</div>
+						<footer class="dialog__footer">
+							<button class="btn" data-modal-close>Close</button>
+						</footer>
+					</div>
+				</div>
+
+				<div class="dialog-overlay"></div>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="../dist/jquery-awesomodals.min.js"></script>
+		<script>
+			$(function() {
+				$('.demo').awesomodals();
+			});
+		</script>
+	</body>
+</html>

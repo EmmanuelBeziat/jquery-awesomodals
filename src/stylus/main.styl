@@ -1,0 +1,93 @@
+color-violet = #cb4a70
+
+body
+	margin 2em
+	font 400 16px/1.5 "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif
+
+.btn
+	display inline-block
+	border 0
+	box-sizing border-box
+	background color-violet
+	color #fff
+	font-size 2em
+	border-radius .1em
+	line-height 2em
+	padding 0 2em
+	transition .4s ease-out
+	border 1px solid color-violet
+	outline 0
+
+	&:hover
+	&:focus
+		background #fff
+		color color-violet
+		cursor pointer
+		transition .15s ease-in
+
+.dialog
+	max-width 480px
+	position fixed
+	left 50%
+	top 2em
+	transform translateX(-50%)
+	z-index 2000
+	visibility hidden
+	backface-visibility hidden
+	perspective 1300px
+
+	&--active
+		visibility visible
+
+		.dialog__content
+			opacity 1
+			transform rotateY(0deg)
+
+		& ~ .dialog-overlay
+			opacity 1
+			visibility visible
+
+	&__content
+		border-radius 3px
+		background #fff
+		overflow hidden
+		box-shadow 0 10px 20px rgba(0, 0, 0, .10)
+		transition .5s ease-in-out
+		opacity 0
+		transform-style preserve-3d
+		transform rotateY(-70deg)
+
+	&__header
+		background color-violet
+		color #fff
+
+	&__title
+		margin 0
+		text-align center
+		font-weight 200
+		line-height 2em
+
+	&__body
+		padding 2em
+
+	&__footer
+		margin 0 2em
+		padding 2em 0
+		text-align right
+		border-top 1px solid rgba(0, 0, 0, .1)
+
+		.btn
+			font-size 1.5em
+
+	&-overlay
+		content ""
+		position fixed
+		visibility hidden
+		top 0
+		left 0
+		right 0
+		bottom 0
+		z-index 1000
+		opacity 0
+		background rgba(0,0,0,.5)
+		transition all .6s

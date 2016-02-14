@@ -1,0 +1,39 @@
+{
+  "name": "jquery-awesomodals",
+  "version": "1.0.0",
+  "description": "Simple modal / dialog system, with all you need for basic usage. Light and customizable!",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelBeziat/jquery-awesomodals.git"
+  },
+  "keywords": [
+    "jQuery",
+    "modals",
+    "dialog"
+  ],
+  "author": "EmmanuelBeziat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmmanuelBeziat/jquery-awesomodals/issues"
+  },
+  "homepage": "https://github.com/EmmanuelBeziat/jquery-awesomodals#readme"
+}
