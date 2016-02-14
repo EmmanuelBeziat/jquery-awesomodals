@@ -83,11 +83,14 @@
 		 * Open modal method
 		 * Call callback on complete
 		 */
-		modalOpen: function($link) {
+		modalOpen: function($element) {
 			this.debug('[action] Open modal call');
-			this.debug('Modal ID: ' + $link.attr('data-modal'));
+			this.debug('Modal ID: ' + $element.attr('data-modal'));
 
-			var $modal = $($link.attr('data-modal'));
+			// If button is a link, prevent following it
+			event.preventDefault();
+
+			var $modal = $($element.attr('data-modal'));
 
 			$modal.addClass(this.options.classActive);
 			this.$modal = $modal;
