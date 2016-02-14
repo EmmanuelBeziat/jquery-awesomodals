@@ -67,7 +67,7 @@
 				.on('click' + '.' + plugin._name, plugin.options.selectorClose, function(event) {
 					plugin.modalClose.call(plugin, $(this));
 				})
-				.on('click', plugin.options.itemOverlay, function(event) {
+				.on('click' + '.' + plugin._name, plugin.options.itemOverlay, function(event) {
 					plugin.modalClose.call(plugin, $(this));
 				});
 		},
