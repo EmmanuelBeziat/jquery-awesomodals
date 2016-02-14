@@ -68,7 +68,9 @@
 					plugin.modalClose.call(plugin, $(this));
 				})
 				.on('click' + '.' + plugin._name, plugin.options.itemOverlay, function(event) {
-					plugin.modalClose.call(plugin, $(this));
+					if (plugin.options.optionOverlayActive) {
+						plugin.modalClose.call(plugin, $(this));
+					}
 				});
 		},
 
@@ -118,9 +120,11 @@
 
 		/**
 		 * Ger the action on overlay click
-		 */
+		 *//* TODO
 		overlayAction: function(plugin, $this) {
 			this.debug('[action] Overlay method call');
+
+			console.log(this.options.optionOverlayActive);
 
 			if (this.options.optionOverlayActive) {
 				plugin.modalClose.call(plugin, $this);
