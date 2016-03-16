@@ -1,5 +1,9 @@
+![version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=flat-square) ![madewith](https://img.shields.io/badge/made%20with-jquery-brightgreen.svg?style=flat-square)
+
 # AwesoModals
 Simple modal / dialog system, with all you need for basic usage. Light and customizable!
+
+---
 
 #Install
 
