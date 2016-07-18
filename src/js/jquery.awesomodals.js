@@ -1,6 +1,6 @@
 /*!
  * Simple collapse/spoilers system
- * Version : 1.0
+ * Version : 1.0.1
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/jquery-spoilers
  **/
@@ -62,14 +62,14 @@
 
 			plugin.$element
 				.on('click' + '.' + plugin._name, plugin.options.selectorOpen, function(event) {
-					plugin.modalOpen.call(plugin, $(this));
+					plugin.modalOpen.call(plugin, $(this), event);
 				})
 				.on('click' + '.' + plugin._name, plugin.options.selectorClose, function(event) {
-					plugin.modalClose.call(plugin, $(this));
+					plugin.modalClose.call(plugin, $(this), event);
 				})
 				.on('click' + '.' + plugin._name, plugin.options.itemOverlay, function(event) {
 					if (plugin.options.optionOverlayActive) {
-						plugin.modalClose.call(plugin, $(this));
+						plugin.modalClose.call(plugin, $(this), event);
 					}
 				});
 		},
@@ -85,7 +85,7 @@
 		 * Open modal method
 		 * Call callback on complete
 		 */
-		modalOpen: function($element) {
+		modalOpen: function($element, event) {
 			this.debug('[action] Open modal call');
 			this.debug('Modal ID: ' + $element.attr('data-modal'));
 
@@ -107,7 +107,7 @@
 		 * Close modal method
 		 * Call callback on complete
 		 */
-		modalClose: function() {
+		modalClose: function(event) {
 			this.debug('[action] Close modal call');
 			this.$modal.removeClass(this.options.classActive);
 			this.$modal = null;

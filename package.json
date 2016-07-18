@@ -1,6 +1,6 @@
 {
   "name": "jquery-awesomodals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple modal / dialog system, with all you need for basic usage. Light and customizable!",
   "main": "gulpfile.js",
   "dependencies": {},
